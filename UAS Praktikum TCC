@@ -1,0 +1,39 @@
+Responsi Praktikum Teknologi Cloude Computing minggu  ke – 4. Yang akan saya bahas yanitu tentang “stack”. Stack atau tumpukan merupakan salah satu teknik dalam struktur data. Karakteristik penting stack adalah bersifat LIFO (Last In First Out) artinya data yang terakhir masuk merupakan data yang akan keluar terlebih dahulu. 
+
+Tahap 1.
+  $ cd devstack
+  $ sudo su -1 stack
+  :~/devstack$ ./stack.sh
+
+Pada tahap pertama kita membuat atau menambahkan stack pada user kita.
+
+Tahap 2
+  $ sudo useradd -s /bin/bash -d /opt/stack -m stack
+
+  $ echo "stack ALL=(ALL) NOPASSWD: ALL" |sudo tee /etc/sudoers.d/stack ALL=(ALL) NOPASSWD: ALL
+  $ sudo su - stack
+
+Untuk tahap kedua diatas merupakan proses untuk memnuat hak pada sudo kita.
+
+Tahap 3
+  stack@host01"~$ git clone https://opendev.org/devstack
+  Cloning into 'devstack'...
+  remote: Enumerating objects: 44956, done.
+  remote: Counting object: 100% (44956/44956), done.
+  remote: Compressing object: 100% (20417/20417), done.
+  remote: Total 44956 (delta 31798), reused 36603 (delta 23850)
+  Receiving objects: 100% (44956/44956), 9.16 MiB | 991.00 KiB/s. done.
+  Resolving deltas : 100% (31798/31798), done.
+  stack@host01"~$
+  
+ Tahap ketiga diatas merupankan tahap dimana kita akan melakukan proses download untuk DevStack.
+ 
+Tahap 4
+  $ apt update -y && apt upgrade -y
+  
+ Proses update dan Upgrade
+ 
+ Tahap 5
+  Cheking init scripts...
+  Configuring libssl1.1:amd64
+
